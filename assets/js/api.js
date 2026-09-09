@@ -1,13 +1,21 @@
+// Detectar automáticamente el entorno (Local o Producción en GitHub Pages)
+const isLocalhost = Boolean(
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1" ||
+    window.location.hostname === "[::1]"
+);
+
+// Definir la URL base según el entorno actual
+const BASE_URL = isLocalhost
+    ? "http://127.0.0.1:3000"
+    : "https://TU-BACKEND-EN-RENDER.onrender.com"; // Reemplaza esta URL cuando despliegues en Render
+
 const API_CONFIG = {
-    BASE_URL: "http://127.0.0.1:3000",
-
-    LOGIN_URL: "http://127.0.0.1:3000/api/auth/login",
-
-    STATUS_URL: "http://127.0.0.1:3000/api/auth/status",
-
-    NOMINA_URL: "http://127.0.0.1:3000/api/nomina/consulta",
-
-    LOGOUT_URL: "http://127.0.0.1:3000/api/auth/logout"
+    BASE_URL: BASE_URL,
+    LOGIN_URL: `${BASE_URL}/api/auth/login`,
+    STATUS_URL: `${BASE_URL}/api/auth/status`,
+    NOMINA_URL: `${BASE_URL}/api/nomina/consulta`,
+    LOGOUT_URL: `${BASE_URL}/api/auth/logout`
 };
 
 
@@ -86,7 +94,7 @@ async function obtenerToken() {
         if (error.request) {
 
             throw new Error(
-                "No se recibió respuesta del backend Node.js. Verifique que esté ejecutándose en el puerto 3000."
+                "No se recibió respuesta del backend Node.js. Verifique que esté ejecutándose el servidor."
             );
         }
 
