@@ -1,0 +1,1396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --vino: #5A1625;
+    --vinoOscuro: #43101B;
+    --vinoClaro: #7B2336;
+
+    --dorado: #D4AF37;
+    --doradoHover: #C89B18;
+
+    --blanco: #FFFFFF;
+
+    --gris: #F4F4F4;
+    --grisOscuro: #555555;
+
+    --texto: #2D2D2D;
+
+    --shadow:
+        0 15px 40px rgba(0, 0, 0, .15);
+
+    --radio: 15px;
+
+    --transicion: .35s;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(
+            140deg,
+            #5A1625 0%,
+            #6B1B2D 40%,
+            #43101B 100%
+        );
+
+    min-height: 100vh;
+
+    color: var(--texto);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #ECECEC;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--vino);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--vinoClaro);
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    background:
+        rgba(67, 16, 27, .90);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.navbar-brand {
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: white !important;
+
+}
+
+
+.nav-link {
+
+    color: white !important;
+
+    transition: .3s;
+
+    font-weight: 500;
+
+}
+
+
+.nav-link:hover {
+
+    color: var(--dorado) !important;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.encabezado {
+
+    padding-top: 45px;
+
+    padding-bottom: 45px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.10);
+
+}
+
+
+.titulo {
+
+    color: white;
+
+    font-size: 2.5rem;
+
+    font-weight: 700;
+
+}
+
+
+.subtitulo {
+
+    color: var(--dorado);
+
+    font-weight: 500;
+
+}
+
+
+.encabezado p {
+
+    color: white;
+
+    opacity: .8;
+
+}
+
+
+.escudo {
+
+    max-width: 130px;
+
+    transition: .4s;
+
+}
+
+
+.escudo:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   PÁGINA DE INICIO
+========================================================= */
+
+.inicio-container {
+
+    min-height:
+        calc(100vh - 150px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 0;
+
+}
+
+
+.inicio-card {
+
+    position: relative;
+
+    min-height: 550px;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+
+    overflow: hidden;
+
+}
+
+
+.inicio-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    background:
+        rgba(212,175,55,.08);
+
+    border-radius: 50%;
+
+    top: -150px;
+
+    left: -150px;
+
+}
+
+
+.inicio-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border-radius: 50%;
+
+    bottom: -200px;
+
+    right: -150px;
+
+}
+
+
+.logos-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+}
+
+
+.logo-box {
+
+    width: 160px;
+
+    height: 160px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.logo-inicio {
+
+    max-width: 140px;
+
+    max-height: 140px;
+
+    object-fit: contain;
+
+    transition: .4s;
+
+}
+
+
+.logo-inicio:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.inicio-contenido {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin:
+        -50px auto 0;
+
+}
+
+
+.icono-inicio {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212,175,55,.15);
+
+    border:
+        2px solid var(--dorado);
+
+    color: var(--dorado);
+
+    font-size: 38px;
+
+}
+
+
+.titulo-inicio {
+
+    color: white;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+}
+
+
+.subtitulo-inicio {
+
+    color: var(--dorado);
+
+    font-weight: 500;
+
+    font-size: 1.5rem;
+
+}
+
+
+.descripcion-inicio {
+
+    color: white;
+
+    opacity: .85;
+
+    font-size: 1.1rem;
+
+}
+
+
+.texto-bienvenida {
+
+    color: white;
+
+    opacity: .75;
+
+    max-width: 650px;
+
+    margin:
+        25px auto;
+
+    line-height: 1.8;
+
+}
+
+
+.separador-dorado {
+
+    width: 100px;
+
+    height: 4px;
+
+    margin: 25px auto;
+
+    background: var(--dorado);
+
+    border-radius: 10px;
+
+}
+
+
+.btn-inicio {
+
+    min-width: 220px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-container {
+
+    min-height:
+        calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 0;
+
+}
+
+
+.login-card {
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+}
+
+
+.login-header {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--vino),
+            var(--vinoClaro)
+        );
+
+    padding: 35px;
+
+}
+
+
+.login-header h3 {
+
+    color: white;
+
+    font-weight: 700;
+
+}
+
+
+.login-header p {
+
+    color: white;
+
+    opacity: .8;
+
+    margin-bottom: 0;
+
+}
+
+
+.login-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212,175,55,.15);
+
+    border:
+        2px solid var(--dorado);
+
+    color: var(--dorado);
+
+    font-size: 32px;
+
+}
+
+
+.login-card .form-control {
+
+    border-radius: 12px;
+
+}
+
+
+.login-card .input-group .form-control {
+
+    border-radius:
+        12px 0 0 12px;
+
+}
+
+
+.login-card .input-group .btn {
+
+    border-radius:
+        0 12px 12px 0;
+
+}
+
+
+.link-regresar {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    transition: .3s;
+
+}
+
+
+.link-regresar:hover {
+
+    color: var(--dorado);
+
+}
+
+
+/* =========================================================
+   TOKEN
+========================================================= */
+
+.token-container {
+
+    animation:
+        fadeIn .5s ease;
+
+}
+
+
+.token-box {
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #F3F3F3;
+
+    color: var(--vino);
+
+    font-size: .85rem;
+
+    word-break: break-all;
+
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.loader-container {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(67,16,27,.94);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 999999;
+
+    backdrop-filter:
+        blur(5px);
+
+}
+
+
+.loader-spinner {
+
+    width: 80px;
+
+    height: 80px;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.dashboard-card {
+
+    border: none;
+
+    border-radius:
+        var(--radio);
+
+    transition:
+        .35s;
+
+    background:
+        rgba(255,255,255,.94);
+
+    backdrop-filter:
+        blur(8px);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.dashboard-card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.dashboard-card h6 {
+
+    color: #666;
+
+    font-weight: 600;
+
+}
+
+
+.dashboard-card h2 {
+
+    font-weight: 700;
+
+    color: var(--vino);
+
+}
+
+
+.icon-card {
+
+    font-size: 3rem;
+
+    color: var(--dorado);
+
+}
+
+
+/* =========================================================
+   CARD GENERAL
+========================================================= */
+
+.card {
+
+    border-radius:
+        var(--radio);
+
+    overflow: hidden;
+
+    box-shadow:
+        var(--shadow);
+
+    border: none;
+
+}
+
+
+.card-header {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--vino),
+            var(--vinoClaro)
+        );
+
+    color: white;
+
+    padding: 18px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.form-label {
+
+    font-weight: 600;
+
+    color: var(--vino);
+
+}
+
+
+.form-control,
+.form-select {
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    border:
+        2px solid #ECECEC;
+
+    transition: .3s;
+
+}
+
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color:
+        var(--dorado);
+
+    box-shadow:
+        0 0 0 .20rem
+        rgba(212,175,55,.25);
+
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.btn {
+
+    border-radius: 12px;
+
+    padding: 10px 25px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+
+.btn-warning {
+
+    background:
+        var(--dorado);
+
+    border: none;
+
+    color: #222;
+
+}
+
+
+.btn-warning:hover {
+
+    background:
+        var(--doradoHover);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.btn-secondary {
+
+    background: #6C757D;
+
+    border: none;
+
+}
+
+
+.btn-secondary:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.table-responsive {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+#tablaNomina {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+#tablaNomina thead th {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--vino),
+            var(--vinoClaro)
+        );
+
+    color: white;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    padding: 15px;
+
+    border: none;
+
+}
+
+
+#tablaNomina tbody td {
+
+    padding: 14px;
+
+    vertical-align: middle;
+
+    color: #444;
+
+}
+
+
+#tablaNomina tbody tr {
+
+    transition: .3s;
+
+}
+
+
+#tablaNomina tbody tr:hover {
+
+    background:
+        #FFF7DF !important;
+
+}
+
+
+.btn-detalle {
+
+    background:
+        var(--vino);
+
+    color: white;
+
+    border-radius: 10px;
+
+    padding: 7px 14px;
+
+    border: none;
+
+    transition: .3s;
+
+}
+
+
+.btn-detalle:hover {
+
+    background:
+        var(--dorado);
+
+    color: #222;
+
+}
+
+
+/* =========================================================
+   DATATABLES
+========================================================= */
+
+.dt-search input {
+
+    border-radius:
+        10px !important;
+
+    border:
+        2px solid #DDD !important;
+
+    padding: 8px !important;
+
+}
+
+
+.dt-length select {
+
+    border-radius:
+        10px !important;
+
+    padding: 5px;
+
+}
+
+
+.dt-info {
+
+    color: white !important;
+
+    font-weight: 500;
+
+}
+
+
+.dt-paging-button {
+
+    border-radius:
+        8px !important;
+
+}
+
+
+.dt-paging-button.current {
+
+    background:
+        var(--dorado) !important;
+
+    color: #222 !important;
+
+    border: none !important;
+
+}
+
+
+/* =========================================================
+   EXPORTACIÓN
+========================================================= */
+
+#btnExcel,
+#btnPDF,
+#btnPrint {
+
+    width: 45px;
+
+    height: 40px;
+
+    border-radius: 12px;
+
+    transition: .3s;
+
+}
+
+
+#btnExcel:hover,
+#btnPDF:hover,
+#btnPrint:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* =========================================================
+   RESUMEN
+========================================================= */
+
+#infoNombre,
+#infoRFC,
+#infoCURP,
+#infoPuesto,
+#infoUnidad,
+#infoEntidad,
+#infoPeriodo,
+#infoRegistro {
+
+    color:
+        var(--vino);
+
+    font-weight:
+        600;
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+
+    border: none;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.modal-header {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--vino),
+            var(--vinoClaro)
+        );
+
+    color: white;
+
+}
+
+
+.modal-body {
+
+    background: #FAFAFA;
+
+}
+
+
+#detalleRegistro {
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: none;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.25);
+
+}
+
+
+.toast-header {
+
+    background:
+        var(--vino);
+
+    color: white;
+
+}
+
+
+.toast-body {
+
+    padding: 15px;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    margin-top: 50px;
+
+    background:
+        rgba(67,16,27,.95);
+
+    color: white;
+
+    padding: 35px;
+
+}
+
+
+footer h5 {
+
+    color:
+        var(--dorado);
+
+    font-weight: 700;
+
+}
+
+
+footer p {
+
+    opacity: .85;
+
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.container {
+
+    animation:
+        fadeIn .6s ease;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width: 992px) {
+
+    .titulo {
+
+        font-size: 2rem;
+
+    }
+
+    .escudo {
+
+        max-width: 90px;
+
+        margin: 15px;
+
+    }
+
+    .dashboard-card {
+
+        margin-bottom: 15px;
+
+    }
+
+    .titulo-inicio {
+
+        font-size: 2.3rem;
+
+    }
+
+}
+
+
+@media(max-width: 768px) {
+
+    body {
+
+        font-size: 14px;
+
+    }
+
+    .titulo {
+
+        font-size: 1.7rem;
+
+    }
+
+    .subtitulo {
+
+        font-size: 1rem;
+
+    }
+
+    .encabezado {
+
+        padding: 25px 0;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+        margin-bottom: 10px;
+
+    }
+
+    .card-header {
+
+        text-align: center;
+
+    }
+
+    #tablaNomina {
+
+        font-size: 13px;
+
+    }
+
+    .inicio-card {
+
+        padding: 25px;
+
+    }
+
+    .logos-container {
+
+        align-items: center;
+
+    }
+
+    .logo-box {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+    .logo-inicio {
+
+        max-width: 80px;
+
+        max-height: 80px;
+
+    }
+
+    .inicio-contenido {
+
+        margin-top: 10px;
+
+    }
+
+    .titulo-inicio {
+
+        font-size: 1.8rem;
+
+    }
+
+    .subtitulo-inicio {
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+
+@media(max-width: 480px) {
+
+    .titulo {
+
+        font-size: 1.4rem;
+
+    }
+
+    .icon-card {
+
+        font-size: 2rem;
+
+    }
+
+    .dashboard-card h2 {
+
+        font-size: 1.5rem;
+
+    }
+
+    .inicio-card {
+
+        padding: 20px;
+
+    }
+
+    .logos-container {
+
+        gap: 20px;
+
+    }
+
+    .titulo-inicio {
+
+        font-size: 1.5rem;
+
+    }
+
+}
