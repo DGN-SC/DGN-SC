@@ -8,7 +8,7 @@ const isLocalhost = Boolean(
 // Definir la URL base según el entorno actual
 const BASE_URL = isLocalhost
     ? "http://127.0.0.1:3000"
-    : "https://TU-BACKEND-EN-RENDER.onrender.com"; // Reemplaza esta URL cuando despliegues en Render
+    : "https://dgn-sc.onrender.com"; // Reemplaza esta URL cuando despliegues en Render
 
 const API_CONFIG = {
     BASE_URL: BASE_URL,
