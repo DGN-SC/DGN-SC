@@ -7,7 +7,13 @@ const axios = require("axios");
 
 const app = express();
 
-
+app.use(cors({
+  origin: [
+    'https://dgn-sc.github.io',
+    'http://127.0.0.1:5500', // Puerto habitual si usas Live Server
+    'http://localhost:5500'
+  ]
+}));
 // ============================================================
 // CONFIGURACIÓN
 // ============================================================
