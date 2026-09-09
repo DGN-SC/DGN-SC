@@ -7,13 +7,28 @@ const axios = require("axios");
 
 const app = express();
 
+// Lista de orígenes permitidos
+const allowedOrigins = [
+  'https://dgn-sc.github.io',
+  'http://127.0.0.1:5500',
+  'http://localhost:5500',
+  'http://127.0.0.1:3000',
+  'http://localhost:3000'
+];
+
 app.use(cors({
-  origin: [
-    'https://dgn-sc.github.io',
-    'http://127.0.0.1:5500', // Puerto habitual si usas Live Server
-    'http://localhost:5500'
-  ]
+  origin: function (origin, callback) {
+    // Permitir solicitudes sin origen (como Apps móviles o Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(null, false);
+    }
+  },
+  credentials: true
 }));
+
 // ============================================================
 // CONFIGURACIÓN
 // ============================================================
