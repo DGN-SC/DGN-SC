@@ -1,13 +1,21 @@
-// Detectar automáticamente el entorno (Local o Producción en GitHub Pages)
-const isLocalhost = Boolean(
-    window.location.hostname === "localhost" ||
-    window.location.hostname === "127.0.0.1" ||
-    window.location.hostname === "[::1]"
+// IP fija de la computadora que actúa como Servidor Backend
+const SERVER_IP = "192.168.1.137";
+
+const hostname = window.location.hostname;
+
+// Detectar si estamos en entorno local o red LAN
+const isLocalNetwork = Boolean(
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname === "[::1]" ||
+    hostname.startsWith("192.168.") ||
+    hostname.startsWith("10.") ||
+    hostname.startsWith("172.")
 );
 
-// Definir la URL base según el entorno actual
-const BASE_URL = isLocalhost
-    ? "http://127.0.0.1:3000"
+// Definir URL del Backend (apunta a la IP del servidor si está en LAN)
+const BASE_URL = isLocalNetwork
+    ? `http://${SERVER_IP}:3000`
     : "https://dgn-sc.onrender.com";
 
 const API_CONFIG = {
@@ -22,7 +30,7 @@ const API_CONFIG = {
  * OBTENER TOKEN
  */
 async function obtenerToken() {
-    console.log("API.JS: iniciando solicitud para obtener token");
+    console.log("API.JS: iniciando solicitud para obtener token a:", API_CONFIG.LOGIN_URL);
 
     try {
         const respuesta = await axios.post(
@@ -159,9 +167,7 @@ async function limpiarSesion() {
     }
 }
 
-/**
- * EXPONER FUNCIONES
- */
+// Exponer las funciones globalmente en el objeto API
 window.API = {
     obtenerToken,
     verificarToken,
